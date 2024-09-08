@@ -9,11 +9,14 @@ function getComputerChoice() {
     switch (randomInt) {
         case 0:
             outcome = "rock";
+            break;
         case 1:
             outcome = "paper";
+            break;
         case 2:
             outcome = "scissors";
     }
-    
+
     return outcome;
 }
+
