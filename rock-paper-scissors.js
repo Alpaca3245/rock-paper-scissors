@@ -32,6 +32,7 @@ function getHumanChoice() {
     return humanChoice;
 }
 
+// Plays a single round of rock paper scissors with the computer
 function playRound(humanChoice, computerChoice) {
     if (humanChoice == computerChoice) {
         console.log("Tie!");
@@ -53,6 +54,14 @@ function playRound(humanChoice, computerChoice) {
     return 0;
 }
 
-function playRoundTest () {
-    playRound(getHumanChoice(), getComputerChoice());
+function playGame() {
+    const maxRounds = 5; // Number of rounds
+
+    for (let i = 0; i < maxRounds; i++) {
+        const humanSelection = getHumanChoice();
+        const computerSelection = getComputerChoice();
+    
+        playRound(humanSelection, computerSelection)
+        console.log("----------------------------");
+    }
 }
