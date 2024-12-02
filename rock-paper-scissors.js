@@ -65,3 +65,25 @@ function playGame() {
         console.log("----------------------------");
     }
 }
+
+// Buttons events
+const btnGroup = document.querySelector(".btnGroup");
+
+btnGroup.addEventListener("click", e => {
+    console.log(e.target);
+    let targetText = e.target.textContent; // Assigning to variable is easier and prevents the system from finding the variable several times
+
+    switch(targetText) {
+        case 'Rock':
+            console.log("Rock");
+            break;
+        case 'Paper':
+            console.log("Paper");
+        break;     
+        case 'Scissors':
+            console.log("Scissors");
+        break;       
+    }
+})
+
+
