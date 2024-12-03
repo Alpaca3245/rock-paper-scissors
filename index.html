@@ -10,27 +10,45 @@
 
 <body>
     <div class="game-container">
-        <div class="choice-display">
-            <p class="choice-text" id="human-choice">Placeholder </p>
-            <p class="choice-text" id="computer-choice">Placeholder </p>
-        </div>
+        <p class="game-container-title">Rock Paper Scissors</p>
+        
+        <div class="info-display">
+            <div class="info-player">
+                <p>Player Score</p>
+                <p id="human-score">0</p>
+                <p>Player Choice</p>
+                <p id="display-human-choice">None</p>
+            </div>
 
-        <div class="scoreboard">
-            <p class="human-score-text">Placeholder</p>
-            <p class="computer-score-text">Placeholder </p>
+            <div class="info-computer">
+                <p>Computer Score</p>
+                <p id="computer-score">0</p>
+                <p>Computer Choice</p>
+                <p id="display-computer-choice">None</p>
+            </div>
         </div>
-
-        <div class="game-controls" id="game-controls1">
-            <button>Rock</button>
-            <button>Paper</button>
-            <button>Scissors</button>
+        
+        <div class="info-rounds">
+            <p>Rounds</p>
+            <p id="number-of-rounds">0/0</p>
         </div>  
 
-        <div class="game-controls" id="game-controls2">
-            <button id="newGameBtn">New Game</button>
-            <button id="resetGameBtn">Reset Game</button>
+        <p id="info-text">Placeholder</p>
+
+        <div>
+            <div class="game-controls" id="game-controls1">
+                <button id="rock-btn">Rock</button>
+                <button id="paper-btn">Paper</button>
+                <button id="scissors-btn">Scissors</button>
+            </div>  
+
+            <div class="game-controls" id="game-controls2">
+                <button id="new-game-btn">New Game</button>
+            </div>
         </div>
     </div>
+
+    
 
     <script src="rock-paper-scissors.js"></script>
 </body>

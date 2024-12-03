@@ -1,33 +1,69 @@
 body {
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+p {
+    margin: 0px;
+    font-weight: bold;
 }
 
 .game-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     width: 500px;
-    padding: 10px;
+    padding: 20px;
+    row-gap: 25px;
     align-items: center;
     background-color: aqua;
+}
+
+.game-container-title {
+    font-size: 32px;
+    font-weight: bolder;
 }
 
 .game-container div {
     column-gap: 10px;
 }
 
-.choice-display {
+.info-display{
     display: flex;
-    justify-content: center;
+    justify-content: center
 }
 
-.scoreboard {
+.info-player, .info-computer {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+    row-gap: 15px;
+    width: 200px;
+    padding: 20px;
 }
 
-.score-number {
-    background-color:red;
+.info-player {
+    background-color: bisque;
+}
+
+.info-computer {
+    background-color: grey;
+}
+
+.info-rounds {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info-rounds p {
+    font-size: 26px;
+}
+
+.info-text {
+    font-size: 20px;
 }
 
 .game-controls {
