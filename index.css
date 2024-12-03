@@ -1,0 +1,48 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 500px;
+    padding: 10px;
+    align-items: center;
+    background-color: aqua;
+}
+
+.game-container div {
+    column-gap: 10px;
+}
+
+.choice-display {
+    display: flex;
+    justify-content: center;
+}
+
+.scoreboard {
+    display: flex;
+}
+
+.score-number {
+    background-color:red;
+}
+
+.game-controls {
+    display: flex;
+    width: 300px;
+    justify-content: center;
+    padding-bottom: 8px;
+}
+
+.game-controls button {
+    width: 90px;
+}
+
+#game-controls2 {  /* Overrides .gameControls */
+    padding-bottom: 0px;
+}
+
+

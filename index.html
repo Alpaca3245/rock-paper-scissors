@@ -3,16 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
     <title>Rock Paper Scissors</title>
 
 </head>
-<body>
 
-    <div class="btnGroup">
-        <button>Rock</button>
-        <button>Paper</button>
-        <button>Scissors</button>
-    </div>  
+<body>
+    <div class="game-container">
+        <div class="choice-display">
+            <p class="choice-text" id="human-choice">Placeholder </p>
+            <p class="choice-text" id="computer-choice">Placeholder </p>
+        </div>
+
+        <div class="scoreboard">
+            <p class="human-score-text">Placeholder</p>
+            <p class="computer-score-text">Placeholder </p>
+        </div>
+
+        <div class="game-controls" id="game-controls1">
+            <button>Rock</button>
+            <button>Paper</button>
+            <button>Scissors</button>
+        </div>  
+
+        <div class="game-controls" id="game-controls2">
+            <button id="newGameBtn">New Game</button>
+            <button id="resetGameBtn">Reset Game</button>
+        </div>
+    </div>
 
     <script src="rock-paper-scissors.js"></script>
 </body>

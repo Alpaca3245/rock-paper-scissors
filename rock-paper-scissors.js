@@ -25,15 +25,12 @@ function getComputerChoice() {
     return computerChoice;
 }
 
-// Prompt that asks user to type in rock, paper or scissors
-function getHumanChoice() {
-    humanChoice = prompt("Choose by inputing \"Rock\" \"Paper\" or \"Scissors\"");
-    console.log("Human choice: " + humanChoice)
-    return humanChoice;
-}
-
 // Plays a single round of rock paper scissors with the computer
+// Use play game to play several rounds
 function playRound(humanChoice, computerChoice) {
+    humanResult = humanChoice.toLowerCase();
+    computerResult = computerChoice.toLowerCase();
+
     if (humanChoice == computerChoice) {
         console.log("Tie!");
     } else if ((humanChoice == "rock") && (computerChoice == "paper")) {
@@ -54,11 +51,11 @@ function playRound(humanChoice, computerChoice) {
     return 0;
 }
 
-function playGame() {
+function playGame(humanBtnSelection) { // Runs inputs arguments for playRound and starts playRound function several times (start rock paper scissors game)
     const maxRounds = 5; // Number of rounds
 
     for (let i = 0; i < maxRounds; i++) {
-        const humanSelection = getHumanChoice();
+        const humanSelection = humanBtnSelection();
         const computerSelection = getComputerChoice();
     
         playRound(humanSelection, computerSelection)
@@ -66,22 +63,27 @@ function playGame() {
     }
 }
 
+
 // Buttons events
-const btnGroup = document.querySelector(".btnGroup");
+const btnGroup = document.querySelector(".game-controls");
 
 btnGroup.addEventListener("click", e => {
     console.log(e.target);
     let targetText = e.target.textContent; // Assigning to variable is easier and prevents the system from finding the variable several times
+    let humanBtnSelection = "";
 
     switch(targetText) {
         case 'Rock':
             console.log("Rock");
+            humanBtnSelection = targetText;
             break;
         case 'Paper':
             console.log("Paper");
+            humanBtnSelection = targetText;
         break;     
         case 'Scissors':
             console.log("Scissors");
+            humanBtnSelection = targetText;
         break;       
     }
 })
